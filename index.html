@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>IZEL COLLECTIVES – Your walls. Your vibe. Your collection.</title>
+<meta name="description" content="Movie, anime, music, sports and vintage posters plus Polaroids and custom prints. Online payment only.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--ink:#111;--mute:#666;--line:#ddd;--red:#e10600;--card:#f5f4f2;--inv:#111;--invt:#fff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e0e0e;--ink:#f3f1ee;--mute:#a09b95;--line:#2c2c2c;--card:#1a1a1a;--inv:#f3f1ee;--invt:#111}}
+*{box-sizing:border-box}html{scroll-padding-top:70px;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.5 'DM Sans',system-ui,sans-serif}
+h1,h2,h3,.d{font-family:Anton,Impact,sans-serif;font-weight:400;letter-spacing:.01em;line-height:1;margin:0}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+.btn{background:var(--red);color:#fff;border:0;padding:13px 22px;font-weight:700;border-radius:2px}
+.btn.o{background:none;border:2px solid var(--ink);color:var(--ink)}
+.btn:disabled{background:var(--line);color:var(--mute);cursor:not-allowed}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:2px solid var(--ink);display:flex;align-items:center;gap:10px;padding:10px 14px}
+header .logo{font-family:Anton;font-size:22px;letter-spacing:.04em}header .logo b{color:var(--red);font-weight:400}
+header input{flex:1;min-width:0;border:1px solid var(--line);background:var(--card);padding:8px 10px;border-radius:2px}
+.ib{background:none;border:0;font-weight:700;padding:6px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 14px}
+section{padding:36px 0}
+.hero{background:#0c0c0c;color:#fff;padding:44px 0 40px;overflow:hidden}
+.hero h1{font-size:clamp(46px,13vw,110px);text-transform:uppercase}
+.hero h1 span{color:var(--red)}
+.hero p{max-width:420px;color:#ccc;margin:14px 0 22px}
+.hero .row{display:flex;gap:10px;flex-wrap:wrap}
+.hero .btn.o{border-color:#fff;color:#fff}
+.wall{display:flex;gap:10px;margin-top:30px;overflow-x:auto;padding-bottom:6px}
+.wall .poster{flex:0 0 120px}
+.tag{margin-top:18px;font-family:Anton;letter-spacing:.12em;color:#999;font-size:14px}
+.sec h2{font-size:clamp(28px,6vw,44px);margin-bottom:6px}
+.sec .sub{color:var(--mute);margin:0 0 18px}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:4px 0 12px}
+.chip{flex:0 0 auto;border:1.5px solid var(--ink);background:none;padding:7px 13px;border-radius:99px;font-size:14px;white-space:nowrap}
+.chip.on{background:var(--ink);color:var(--bg)}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+@media(min-width:700px){.grid{grid-template-columns:repeat(4,1fr)}}
+.card{cursor:pointer;position:relative}
+.card .nm{font-weight:700;margin-top:8px;font-size:15px}.card .pr{color:var(--mute);font-size:14px}
+.poster{aspect-ratio:2/3;position:relative;display:flex;flex-direction:column;justify-content:flex-end;padding:12px;color:#fff;overflow:hidden;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+.poster::before{content:"";position:absolute;inset:0;background:linear-gradient(160deg,transparent 30%,rgba(0,0,0,.75))}
+.poster .t{position:relative;font-family:Anton;font-size:22px;line-height:1;text-transform:uppercase}
+.poster .c{position:relative;font-size:10px;letter-spacing:.14em;opacity:.85;margin-top:6px}
+.heart{position:absolute;top:6px;right:6px;z-index:2;background:rgba(0,0,0,.55);color:#fff;border:0;border-radius:50%;width:32px;height:32px}
+.heart.on{color:var(--red)}
+.band{background:var(--inv);color:var(--invt)}
+.band .sub{color:inherit;opacity:.7}
+.offers{display:grid;gap:12px}@media(min-width:700px){.offers{grid-template-columns:repeat(3,1fr)}}
+.offer{border:2px solid var(--red);padding:16px}.offer b{font-family:Anton;font-size:26px;display:block;color:var(--red);font-weight:400}
+.pol{display:grid;gap:12px}@media(min-width:700px){.pol{grid-template-columns:repeat(3,1fr)}}
+.polc{background:var(--card);padding:16px;border:1px solid var(--line)}
+.polc .d{font-size:34px;color:var(--red)}
+.two{display:grid;gap:16px}@media(min-width:800px){.two{grid-template-columns:1fr 1fr}}
+.panel{border:2px solid var(--ink);padding:16px;background:var(--bg);color:var(--ink)}
+.panel h3{font-size:26px;margin-bottom:10px}
+label{display:block;font-size:13px;font-weight:700;margin:10px 0 4px}
+.panel input,.panel select,.panel textarea,.f input{width:100%;padding:9px;border:1px solid var(--line);background:var(--card);border-radius:2px}
+.seg{display:flex;gap:6px;flex-wrap:wrap}.seg button{flex:1;padding:9px 6px;border:1.5px solid var(--ink);background:none;min-width:64px}
+.seg button.on{background:var(--ink);color:var(--bg)}
+.note{font-size:12.5px;color:var(--mute);margin:6px 0}
+.prev{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.pz{width:84px;background:#fff;padding:6px 6px 22px;box-shadow:0 3px 8px rgba(0,0,0,.25);color:#111;font-size:10px;text-align:center}
+.pz.black{background:#111;color:#fff}.pz.red{background:var(--red);color:#fff}.pz.rnd{border-radius:8px}
+.pz img{width:100%;aspect-ratio:1;object-fit:cover;display:block}
+.pp{margin:10px auto;background:#fff;position:relative;overflow:hidden;box-shadow:0 6px 18px rgba(0,0,0,.3);display:flex;align-items:flex-end;justify-content:center}
+.pp img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.pp span{position:relative;font-family:Anton;font-size:22px;color:#fff;text-align:center;padding:12px;text-shadow:0 2px 8px #000;text-transform:uppercase}
+.pp.s-bw img{filter:grayscale(1) contrast(1.1)}.pp.s-vintage img{filter:sepia(.7) contrast(.9)}.pp.s-bold img{filter:saturate(1.8) contrast(1.15)}
+.total{display:flex;justify-content:space-between;align-items:center;margin-top:12px;font-weight:700}.total .d{font-size:28px}
+.rev{display:grid;gap:12px}@media(min-width:700px){.rev{grid-template-columns:repeat(3,1fr)}}
+.rv{border-left:4px solid var(--red);padding:4px 12px;background:var(--card)}
+.ig{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+footer{background:#0c0c0c;color:#aaa;padding:30px 0 90px;font-size:14px}
+footer a{color:#fff;display:block;margin:4px 0;cursor:pointer}
+.ov{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:50;display:none}
+.ov.on{display:block}
+.sheet{position:absolute;right:0;top:0;bottom:0;width:min(440px,100%);background:var(--bg);overflow-y:auto;padding:16px;padding-top:calc(16px + env(safe-area-inset-top,0px));padding-bottom:calc(16px + env(safe-area-inset-bottom,0px))}
+.sheet.c{left:0;right:0;margin:auto;top:5vh;bottom:5vh;width:min(700px,94%);}
+.x{float:right;font-size:24px;background:none;border:0}
+.ci{display:flex;gap:10px;padding:10px 0;border-bottom:1px solid var(--line)}
+.ci .poster{width:56px;flex:none;padding:4px}.ci .poster .t,.ci .poster .c{display:none}
+.ci img.th{width:56px;height:84px;object-fit:cover}
+.q{display:inline-flex;align-items:center;border:1px solid var(--ink)}.q button{border:0;background:none;width:30px;height:30px;font-weight:700}.q span{min-width:28px;text-align:center}
+.warn{background:#fff1f0;color:#8a1a14;border:1px solid var(--red);padding:9px;font-size:14px;margin:10px 0}
+.pay{background:var(--ink);color:var(--bg);padding:9px;font-size:12.5px;font-weight:700;text-align:center;margin:10px 0}
+.row2{display:flex;justify-content:space-between;margin:4px 0}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:15;background:var(--inv);color:var(--invt);padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));display:flex;gap:10px;justify-content:space-between;align-items:center;font-weight:700;font-size:14px}
+.wa{position:fixed;right:12px;bottom:calc(74px + env(safe-area-inset-bottom,0px));z-index:16;background:#1fa855;color:#fff;border-radius:99px;padding:11px 15px;text-decoration:none;font-weight:700;font-size:14px}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:130px;background:var(--ink);color:var(--bg);padding:9px 16px;z-index:60;border-radius:2px;display:none}
+.mock{height:150px;background:linear-gradient(#d9d2c8 0 72%,#8a6b4a 72%);position:relative;display:flex;justify-content:center;align-items:center;margin:10px 0}
+.mock .poster{height:100px;width:67px;padding:4px;flex:none}.mock .poster .t,.mock .poster .c{display:none}
+.mock i{position:absolute;bottom:28px;left:14%;width:22%;height:34px;background:#445;border-radius:4px 4px 0 0}
+.mock i+i{left:auto;right:14%;width:16%;height:56px;background:#6a7a5a}
+:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style></head>
+<body>
+<header><span class="logo">IZEL <b>COLLECTIVES</b></span><input id="q" placeholder="Search posters" aria-label="Search posters" oninput="S.q=this.value;renderShop()"><button class="ib" onclick="openW()" aria-label="Wishlist">♥ <span id="wc">0</span></button><button class="ib" onclick="openCart()">Cart <span id="cc">0</span></button></header>
+
+<div class="hero"><div class="wrap">
+<h1>Make your<br>walls <span>speak.</span></h1>
+<p>Discover posters that match your personality.</p>
+<div class="row"><button class="btn" onclick="go('shop')">SHOP NOW</button><button class="btn o" onclick="go('custom')">CUSTOMISE YOUR OWN</button></div>
+<div class="wall" id="wall"></div>
+<div class="tag">YOUR WALLS. YOUR VIBE. YOUR COLLECTION.</div>
+</div></div>
+
+<section class="sec" id="shop"><div class="wrap">
+<h2>Shop by collection</h2><p class="sub">14 collections. Sizes from A6 to A3.</p>
+<div class="chips" id="chips"></div>
+<div class="grid" id="grid"></div>
+</div></section>
+
+<section class="sec band" id="hl"><div class="wrap">
+<h2>Best sellers</h2><p class="sub">What walls are wearing right now.</p><div class="grid" id="best"></div>
+<h2 style="margin-top:34px">New arrivals</h2><p class="sub">Just printed.</p><div class="grid" id="new"></div>
+</div></section>
+
+<section class="sec" id="polaroids"><div class="wrap">
+<h2>Polaroids</h2><p class="sub">Pick a tier. Minimum quantities apply automatically.</p>
+<div class="pol" id="pol"></div>
+</div></section>
+
+<section class="sec" id="offers"><div class="wrap">
+<h2>Special offers</h2><p class="sub">&nbsp;</p>
+<div class="offers"><div class="offer"><b>₹250</b>Minimum order value. Delivery not counted.</div><div class="offer"><b>₹60</b>Delivery in Chennai. ₹100 for the rest of India.</div><div class="offer"><b>25 @ ₹8</b>Cheapest Polaroid pack. Starts at ₹200.</div></div>
+</div></section>
+
+<section class="sec band" id="custom"><div class="wrap">
+<h2>Customise your own</h2><p class="sub">Upload your photos. See the preview. Add to cart.</p>
+<div class="two">
+<div class="panel"><h3>Your Polaroids</h3>
+<label>Photos (add several)</label><input type="file" id="pf" accept="image/*" multiple onchange="polFiles(this)">
+<p class="note">Use sharp photos, at least 1000 px on the short side. Blurry uploads print blurry.</p>
+<label>Price tier</label><div class="seg" id="ptier"></div>
+<label>Quantity <span id="pmin" class="note"></span></label><div class="q"><button onclick="polQ(-1)">−</button><span id="pq">25</span><button onclick="polQ(1)">+</button></div>
+<label>Caption (optional)</label><input id="pcap" maxlength="40" oninput="polPrev()">
+<label>Border</label><div class="seg" id="pbor"></div>
+<label>Layout</label><div class="seg" id="play"></div>
+<label>Printing instructions</label><textarea id="pins" rows="2"></textarea>
+<div class="prev" id="pprev"></div>
+<div class="total"><span>Total</span><span class="d" id="ptot"></span></div>
+<button class="btn" style="width:100%;margin-top:10px" onclick="addPol()">Add to cart</button></div>
+
+<div class="panel"><h3>Your Poster</h3>
+<label>Image or design</label><input type="file" id="qf" accept="image/*" onchange="posFile(this)">
+<p class="note">Use a high-resolution file. A3 needs roughly 3500 × 4950 px for a crisp print.</p>
+<label>Size</label><div class="seg" id="qsz"></div>
+<label>Orientation</label><div class="seg" id="qor"></div>
+<label>Text on poster</label><input id="qtx" maxlength="40" oninput="posPrev()">
+<label>Style</label><div class="seg" id="qst"></div>
+<label>Printing instructions</label><textarea id="qin" rows="2"></textarea>
+<div id="qprev"></div>
+<div class="total"><span>Price</span><span class="d" id="qpr"></span></div>
+<button class="btn" style="width:100%;margin-top:10px" onclick="addPos()">Add to cart</button></div>
+</div>
+</div></section>
+
+<section class="sec" id="reviews"><div class="wrap">
+<h2>Customer reviews</h2><p class="sub">Sample text. Replace with your real reviews.</p>
+<div class="rev"><div class="rv">★★★★★<br>Sample review: colours look rich and the print is sharp.<br><b>Customer name</b></div><div class="rv">★★★★★<br>Sample review: my Polaroid set arrived neatly packed.<br><b>Customer name</b></div><div class="rv">★★★★☆<br>Sample review: the A3 poster fits my room perfectly.<br><b>Customer name</b></div></div>
+</div></section>
+
+<section class="sec"><div class="wrap"><h2>On Instagram</h2><p class="sub"><a href="https://www.instagram.com/izelcollectives" target="_blank" rel="noopener" style="color:var(--red);font-weight:700">Follow @izelcollectives</a></p><div class="ig" id="ig"></div></div></section>
+
+<footer><div class="wrap"><div class="d" style="font-size:24px;color:#fff">IZEL COLLECTIVES</div><p>YOUR WALLS. YOUR VIBE. YOUR COLLECTION.</p><p style="color:#fff;font-weight:700">ONLINE PAYMENT ONLY – CASH ON DELIVERY IS NOT AVAILABLE.</p>
+<a onclick="policy('Privacy policy')">Privacy policy</a><a onclick="policy('Terms and conditions')">Terms and conditions</a><a onclick="policy('Return and refund policy')">Return and refund policy</a></div></footer>
+
+<a class="wa" href="https://wa.me/916369674197" target="_blank" rel="noopener">WhatsApp</a>
+<div class="bar"><span id="bt">Cart is empty</span><button class="btn" onclick="openCart()">View cart</button></div>
+<div class="toast" id="toast"></div>
+<div class="ov" id="ov" onclick="if(event.target===this)closeOv()"><div class="sheet" id="sh"></div></div>
+
+<script>
+const SIZES={A6:30,A5:45,A4:60,A3:150};
+const TIERS=[{p:8,m:25},{p:10,m:20},{p:15,m:15}];
+const CATS={'Tamil Movie Posters':['Vettai Raja','Kaaval','Thalaivar Era'],'Hollywood Posters':['Dark Orbit','Neon Drive','Last Frontier'],'Malayalam Movie Posters':['Kadalpaalam','Monsoon Tales','Thira'],'Anime Posters':['Shadow Blade','Sky Pirates','Spirit Garden'],'Music Artists':['Live Tour','Vinyl Nights','Bass Drop'],'Tamil Actors':['Mass Hero','Stylish Star','Classic Icon'],'Hollywood Actors':['Silver Screen','Noir Face','Leading Man'],'Cricketers':['Final Over','Captain Cool','Sixer King'],'Footballers':['Golden Boot','Derby Day','Free Kick'],'Vintage Movie Posters':['Retro Reel','1970s Thriller','Drive-In'],'Celebrity Collections':['Icon Series','Red Carpet','Pop Culture'],'Polaroids':['Pack of Polaroids','Mixed Moods','Minimal Set'],'Wall Decor Collections':['Gallery Wall Set','Bedroom Trio','Study Corner'],'Customised Posters':['Your Photo Poster','Name Poster','Quote Poster']};
+const HUES=[0,350,20,210,280,40,200,140,100,30,320,260,180,10,230];
+let P=[],i=0;
+Object.keys(CATS).forEach((c,ci)=>CATS[c].forEach(n=>P.push({id:i++,n,c,h:HUES[ci],pol:c==='Polaroids'})));
+const S={cat:'All',q:''},cart=[],wish=new Set();
+const $=id=>document.getElementById(id);
+const inr=n=>'₹'+n;
+function art(p,cls=''){return `<div class="poster ${cls}" style="background:linear-gradient(150deg,hsl(${p.h},75%,38%),hsl(${(p.h+50)%360},70%,14%))"><div class="t">${p.n}</div><div class="c">${p.c.toUpperCase()}</div></div>`}
+function card(p){return `<div class="card" onclick="openP(${p.id})">${art(p)}<button class="heart ${wish.has(p.id)?'on':''}" onclick="event.stopPropagation();fav(${p.id})" aria-label="Wishlist">♥</button><div class="nm">${p.n}</div><div class="pr">${p.pol?'From ₹8 each':'From ₹30'}</div></div>`}
+function renderShop(){
+ $('chips').innerHTML=['All',...Object.keys(CATS)].map(c=>`<button class="chip ${S.cat===c?'on':''}" onclick="S.cat='${c}';renderShop()">${c}</button>`).join('');
+ const l=P.filter(p=>(S.cat==='All'||p.c===S.cat)&&(p.n+p.c).toLowerCase().includes(S.q.toLowerCase()));
+ $('grid').innerHTML=l.length?l.map(card).join(''):'<p>No posters match. Try another word or collection.</p>';
+}
+function init(){
+ $('wall').innerHTML=[0,9,20,30,38].map(k=>art(P[k])).join('');
+ $('best').innerHTML=[0,3,9,12,18,21,27,33].map(k=>card(P[k])).join('');
+ $('new').innerHTML=[2,5,14,17,26,29,35,40].map(k=>card(P[k])).join('');
+ $('ig').innerHTML=[3,6,12,15,24,27].map(k=>art({...P[k],n:'',c:'@izelcollectives'})).join('');
+ $('pol').innerHTML=TIERS.map(t=>`<div class="polc"><div class="d">₹${t.p} each</div><p>Minimum ${t.m} pieces. Starts at ${inr(t.p*t.m)}.</p><button class="btn" onclick="polTier(${TIERS.indexOf(t)});go('custom')">Customise this tier</button></div>`).join('');
+ renderShop();polUI();posUI();
+}
+function go(id){$(id).scrollIntoView()}
+function toast(m){const t=$('toast');t.textContent=m;t.style.display='block';clearTimeout(t._t);t._t=setTimeout(()=>t.style.display='none',1800)}
+function fav(id){wish.has(id)?wish.delete(id):wish.add(id);$('wc').textContent=wish.size;renderShop()}
+function openW(){const l=[...wish].map(k=>P[k]);sheet(`<button class="x" onclick="closeOv()">×</button><h3>Wishlist</h3>${l.length?`<div class="grid" style="grid-template-columns:1fr 1fr;margin-top:12px">${l.map(card).join('')}</div>`:'<p>Tap ♥ on a poster to save it here.</p>'}`)}
+function sheet(h,c){$('sh').className='sheet'+(c?' c':'');$('sh').innerHTML=h;$('ov').classList.add('on')}
+function closeOv(){$('ov').classList.remove('on')}
+function policy(t){sheet(`<button class="x" onclick="closeOv()">×</button><h3>${t}</h3><p>Draft placeholder. Replace this with your own policy text before launch. Have it checked, especially for refunds on customised prints.</p>`)}
+
+/* product */
+let cur={id:0,size:'A4',qty:1,tier:0};
+function openP(id){cur={id,size:'A4',qty:1,tier:0};drawP()}
+function drawP(){
+ const p=P[cur.id];
+ const rel=P.filter(x=>x.c===p.c&&x.id!==p.id).concat(P.filter(x=>x.c!==p.c)).slice(0,2);
+ let opts,price;
+ if(p.pol){const t=TIERS[cur.tier];cur.qty=Math.max(cur.qty,t.m);price=t.p*cur.qty;
+  opts=`<label>Price tier</label><div class="seg">${TIERS.map((t,k)=>`<button class="${k===cur.tier?'on':''}" onclick="cur.tier=${k};cur.qty=${t.m};drawP()">₹${t.p}</button>`).join('')}</div><p class="note">Minimum ${t.m} pieces.</p>`}
+ else{price=SIZES[cur.size]*cur.qty;opts=`<label>Size</label><div class="seg">${Object.keys(SIZES).map(s=>`<button class="${s===cur.size?'on':''}" onclick="cur.size='${s}';drawP()">${s}<br>₹${SIZES[s]}</button>`).join('')}</div>`}
+ const min=p.pol?TIERS[cur.tier].m:1;
+ sheet(`<button class="x" onclick="closeOv()">×</button><h3>${p.n}</h3><p class="note">${p.c}</p><div style="max-width:220px;margin:10px auto">${art(p)}</div>
+ <p>Sample description. Add your real product details in the admin once the backend is connected. Printed on quality paper.</p>${opts}
+ <label>Quantity</label><div class="q"><button onclick="cur.qty=Math.max(${min},cur.qty-1);drawP()">−</button><span>${cur.qty}</span><button onclick="cur.qty++;drawP()">+</button></div>
+ <div class="total"><span>Total</span><span class="d">${inr(price)}</span></div>
+ <div style="display:flex;gap:8px;margin-top:10px"><button class="btn o" style="flex:1" onclick="addP(false)">Add to cart</button><button class="btn" style="flex:1" onclick="addP(true)">Buy now</button></div>
+ <h3 style="font-size:20px;margin-top:18px">On your wall</h3><div class="mock"><i></i>${art(p)}<i></i></div><p class="note">Illustrative mockup. Replace with real room photos.</p>
+ <h3 style="font-size:20px;margin-top:10px">Related</h3><div class="grid" style="grid-template-columns:1fr 1fr;margin-top:10px">${rel.map(card).join('')}</div>`)
+}
+function addItem(it){const k=cart.find(x=>x.key===it.key&&!it.files);k&&!it.files?k.qty+=it.qty:cart.push(it);upd();toast('Added to cart')}
+function addP(buy){const p=P[cur.id];
+ const it=p.pol?{key:'pol'+p.id+cur.tier,name:p.n+' (Polaroid)',kind:'pol',unit:TIERS[cur.tier].p,min:TIERS[cur.tier].m,qty:cur.qty,p}:{key:'p'+p.id+cur.size,name:p.n,kind:'poster',size:cur.size,unit:SIZES[cur.size],min:1,qty:cur.qty,p};
+ addItem(it);if(buy)openCart();else closeOv()}
+
+/* cart */
+const sub=()=>cart.reduce((a,x)=>a+x.unit*x.qty,0);
+function upd(){$('cc').textContent=cart.reduce((a,x)=>a+x.qty,0);const s=sub();$('bt').textContent=cart.length?`Subtotal ${inr(s)}`+(s<250?` · ₹${250-s} to go`:' · Ready'):'Cart is empty'}
+function qty(k,d){const x=cart[k];x.qty=Math.max(x.min,x.qty+d);upd();openCart()}
+function rm(k){cart.splice(k,1);upd();openCart()}
+function chSize(k,s){const x=cart[k];x.size=s;x.unit=SIZES[s];upd();openCart()}
+let pin='';
+function deliv(){return /^\d{6}$/.test(pin)?(pin.startsWith('600')?60:100):null}
+function openCart(){
+ const s=sub(),d=deliv(),ok=s>=250&&cart.length;
+ const rows=cart.map((x,k)=>`<div class="ci">${x.thumb?`<img class="th" src="${x.thumb}" alt="">`:art(x.p||P[0])}<div style="flex:1"><b>${x.name}</b><div class="note">${x.kind==='poster'?`<select onchange="chSize(${k},this.value)">${Object.keys(SIZES).map(z=>`<option ${z===x.size?'selected':''}>${z}</option>`).join('')}</select> `:''}${x.note||''} ${inr(x.unit)} each${x.min>1?` · min ${x.min}`:''}</div><div class="q"><button onclick="qty(${k},-1)">−</button><span>${x.qty}</span><button onclick="qty(${k},1)">+</button></div> <button class="ib" onclick="rm(${k})">Remove</button></div><b>${inr(x.unit*x.qty)}</b></div>`).join('');
+ sheet(`<button class="x" onclick="closeOv()">×</button><h3>Your cart</h3>${rows||'<p>Your cart is empty. Pick a poster to start.</p>'}
+ ${cart.length?`<div class="row2"><span>Subtotal</span><b>${inr(s)}</b></div>
+ ${s<250?`<div class="warn">You're ₹${250-s} away from the minimum order value. Add more products to continue!</div>`:''}
+ <label>Delivery PIN code</label><input class="f" id="pin" value="${pin}" inputmode="numeric" maxlength="6" style="width:100%;padding:9px;border:1px solid var(--line);background:var(--card)" onchange="pin=this.value;openCart()">
+ <div class="row2"><span>Delivery</span><b>${d===null?'Enter PIN':inr(d)}</b></div><p class="note">Chennai ₹60. Other states ₹100. Delivery is not counted towards the ₹250 minimum.</p>
+ <div class="row2" style="font-size:18px"><span>Total</span><b>${d===null?inr(s):inr(s+d)}</b></div>
+ <div class="pay">ONLINE PAYMENT ONLY – CASH ON DELIVERY IS NOT AVAILABLE.</div>
+ <button class="btn" style="width:100%" ${ok&&d!==null?'':'disabled'} onclick="checkout()">Proceed to checkout</button>`:''}`)
+}
+function checkout(){
+ const bad=cart.find(x=>x.kind==='custom'&&!x.files);
+ if(bad){toast('Upload photos for custom items first');return}
+ sheet(`<button class="x" onclick="closeOv()">×</button><h3>Checkout</h3><div class="pay">ONLINE PAYMENT ONLY – CASH ON DELIVERY IS NOT AVAILABLE.</div>
+ <div class="f"><label>Name</label><input><label>Mobile</label><input inputmode="tel"><label>Email</label><input type="email"><label>Full address</label><input><label>City</label><input><label>State</label><input><label>PIN code</label><input value="${pin}"></div>
+ <div class="warn">Payment is not live yet. This front end has no server, so it cannot take or verify a real payment. Orders are only marked paid once Razorpay is verified on your backend. Connect the backend to switch this on.</div>
+ <button class="btn" style="width:100%" disabled>Pay online (needs backend)</button>`)
+}
+
+/* polaroid builder */
+const PB={tier:0,qty:25,border:'white',layout:'grid',files:[]};
+function seg(id,items,key,cb){$(id).innerHTML=items.map(([v,l])=>`<button class="${PB[key]===v||PQ[key]===v?'on':''}" onclick="${cb}('${v}')">${l}</button>`).join('')}
+const PQ={size:'A4',orient:'portrait',style:'plain',img:null,file:null};
+function polUI(){
+ $('ptier').innerHTML=TIERS.map((t,k)=>`<button class="${PB.tier===k?'on':''}" onclick="polTier(${k})">₹${t.p}</button>`).join('');
+ seg('pbor',[['white','White'],['black','Black'],['red','Red'],['rnd','Rounded']],'border','polB');
+ seg('play',[['grid','Grid'],['row','Row'],['stack','Spread']],'layout','polL');
+ polPrev()}
+function polTier(k){PB.tier=k;PB.qty=TIERS[k].m;polUI()}
+function polQ(d){PB.qty=Math.max(TIERS[PB.tier].m,PB.qty+d);polPrev()}
+function polB(v){PB.border=v;polUI()}function polL(v){PB.layout=v;polUI()}
+function polFiles(el){PB.files=[...PB.files,...[...el.files].map(f=>({f,u:URL.createObjectURL(f)}))];el.value='';polPrev()}
+function polPrev(){const t=TIERS[PB.tier];PB.qty=Math.max(PB.qty,t.m);
+ $('pmin').textContent=`(min ${t.m})`;$('pq').textContent=PB.qty;$('ptot').textContent=inr(t.p*PB.qty);
+ const cap=$('pcap').value.replace(/</g,'&lt;');
+ const st=PB.layout==='row'?'flex-wrap:nowrap;overflow-x:auto':'';
+ $('pprev').style.cssText=st;
+ $('pprev').innerHTML=PB.files.length?PB.files.map((x,k)=>`<div class="pz ${PB.border}" style="${PB.layout==='stack'?`transform:rotate(${(k%5-2)*4}deg)`:''}"><img src="${x.u}" alt=""><div>${cap}</div><button class="ib" style="font-size:10px;color:inherit" onclick="PB.files.splice(${k},1);polPrev()">Replace/remove</button></div>`).join(''):'<p class="note">Your photos appear here.</p>'}
+function addPol(){const t=TIERS[PB.tier];
+ if(!PB.files.length){toast('Upload at least one photo');return}
+ addItem({key:'c'+Date.now(),name:'Custom Polaroids',kind:'custom',unit:t.p,min:t.m,qty:PB.qty,files:PB.files.slice(),thumb:PB.files[0].u,note:`${PB.files.length} photo(s), ${PB.border} border, ${PB.layout}. `})}
+
+/* poster builder */
+function posUI(){
+ seg('qsz',Object.keys(SIZES).map(s=>[s,s]),'size','posS');
+ seg('qor',[['portrait','Portrait'],['landscape','Landscape']],'orient','posO');
+ seg('qst',[['plain','Original'],['bw','Black & white'],['vintage','Vintage'],['bold','Bold colour']],'style','posT');
+ posPrev()}
+function posS(v){PQ.size=v;posUI()}function posO(v){PQ.orient=v;posUI()}function posT(v){PQ.style=v;posUI()}
+function posFile(el){const f=el.files[0];if(!f)return;PQ.file=f;PQ.img=URL.createObjectURL(f);posPrev()}
+function posPrev(){$('qpr').textContent=inr(SIZES[PQ.size]);
+ const w=PQ.orient==='portrait'?150:220,h=PQ.orient==='portrait'?225:150;
+ $('qprev').innerHTML=PQ.img?`<div class="pp s-${PQ.style}" style="width:${w}px;height:${h}px"><img src="${PQ.img}" alt=""><span>${$('qtx').value.replace(/</g,'&lt;')}</span></div>`:'<p class="note">Your poster preview appears here.</p>'}
+function addPos(){if(!PQ.img){toast('Upload an image first');return}
+ addItem({key:'c'+Date.now(),name:'Custom Poster',kind:'custom',size:PQ.size,unit:SIZES[PQ.size],min:1,qty:1,files:[PQ.file],thumb:PQ.img,note:`${PQ.size}, ${PQ.orient}, ${PQ.style}. `});}
+init();
+</script>
+</body></html>
